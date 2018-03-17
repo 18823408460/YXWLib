@@ -1,0 +1,43 @@
+public abstract class Window{
+   private WindowManagerImple mWindowManager;
+
+   public abstract View getDecorView();
+   public abstract void setConentView() ;
+
+   public View findViewById(int id){
+        return getDecordView.findViewByid(id);
+   }
+}
+
+public class WindowManagerImple implements WindowManager{
+    public WindowManagerGlobal mGlobal ;
+}
+
+public class WindowManagerGlobal{
+    private ArrayList<View> mViews ;
+    private ArrayList<ViewRootImpl> mRoos ;// 它里面有个mWindowSession负责和WMS通信，然后进行绘制之类的。
+    private ArrayList<ViewRootImpl> mParams ;
+
+    public void addView(){
+    }
+}
+
+public class PhoneWindow extends Window{
+    public DecorView mDecor; // 容器类，将系统xml布局添加到mDecor中。它是一个LinearLayout = title +  contentView（FrameLayout）
+
+    public View getDecorView(){
+       .....
+    }
+    public void setConentView(int id){
+       ..... // 最终都是通过 ViewRootImpl和WMS进行通信请求绘制的。
+    }
+
+}
+
+public class Activity{
+       public Window mWindow = new PhoneWindow(this,window) ;
+
+       public void setConentView(int id){
+            mWindow.setConentView(id);
+       }
+}

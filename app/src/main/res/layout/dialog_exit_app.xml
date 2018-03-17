@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="60dp"
+        android:paddingTop="60dp"
+        android:gravity="center"
+        android:text="@string/s_quit_app"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_text_default" />
+
+    <Button
+        android:id="@+id/_btnExitAppOK"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:background="@mipmap/img_exit_left"
+        android:text="@string/s_ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_text_default" />
+
+    <Button
+        android:id="@+id/_btnExitAppCancel"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:background="@mipmap/img_exit_right"
+        android:text="@string/s_no"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_text_default" />
+</RelativeLayout>

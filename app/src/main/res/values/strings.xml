@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">YXWLib</string>
+
+
+    <string name="time_format">yyyy年MM月dd日HH点mm分</string>
+    <string name="it_is_time_to">现在是%1$s,到时间%2$s了</string>
+    <string name="sorry_not_can_cancle_alarm">对不起，没有可以取消的闹钟</string>
+    <string name="alarm_was_cancle">好的，闹钟已取消</string>
+    <string name="sorry_not_can_cancle_remind">对不起，没有可以取消的提醒</string>
+    <string name="remind_was_cancle">sorry_not_can_cancle_alarm+"  "+好的，提醒已取消</string>
+    <string name="blur">高斯效果</string>
+    <string name="value">颜色变化</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="send_result">发送识别结果</string>
+    <string name="wake_test">唤醒测试</string>
+    <string name="sensor_test">感应器测试</string>
+    <string name="pad_test">pad结果处理</string>
+    <string name="socket_test">socket处理</string>
+    <string name="rxjava">rxjavSDFSDFFSDFaSDFSFDSFSDF</string>
+    <string name="calc">计算</string>
+    <string name="fix">修复</string>
+    <!-- config -->
+    <string name="c_m1">一键进入</string>
+    <string name="c_m2">验证用户</string>
+    <string name="c_enter1">一键登录云帧视频呼叫主界面</string>
+    <string name="c_enter2">输入用户进入云帧视频呼叫主界面</string>
+    <string name="c_ip">请输入服务器IP</string>
+    <string name="c_user">请输入用户名</string>
+    <string name="c_pwd">请输入密码</string>
+    <string name="c_csip">192.168.0.226</string>
+    <string name="c_back">返回</string>
+    <string name="c_server_login">是否以坐席身份登录</string>
+
+    <!-- net msg -->
+    <string name="n_net_fail">亲,您的网络无法访问Internet</string>
+    <string name="n_net_error">亲,您的网络异常,看看是否连接到wifi或者移动网络</string>
+    <string name="n_net_connected_mob">已连接至移动网络</string>
+    <string name="n_net_connected_wifi">已连接至wifi,请放心使用</string>
+    <string name="n_net_fail_exit_talk">网络异常,自动退会</string>
+    <string name="n_net_fail_exit_mainview">网络异常,自动退出,请重新登录</string>
+    <string name="n_server_logining">用户登录中</string>
+    <string name="n_server_login_success">用户登录成功</string>
+    <string name="n_server_login_out">用户已脱机</string>
+    <string name="n_server_login_false">用户登录失败</string>
+    <string name="n_server_conneting">服务器连接中……</string>
+    <string name="n_server_reconnected">已重新连接至服务器</string>
+    <string name="n_server_busy">连接服务器忙,请检查网络</string>
+    <string name="n_server_fail">连接服务器失败</string>
+    <string name="n_server_connected">服务器连接成功</string>
+    <string name="n_server_disconnect">未连接至服务器</string>
+    <string name="n_server_center_close">排队服务未开启</string>
+    <string name="n_server_center_open">排队服务已开启</string>
+
+    <!-- error -->
+    <string name="error_user">无效的账户！</string>
+    <string name="error_pwd">无效的密码！</string>
+    <string name="error_online">帐号已在线！请检查！</string>
+    <string name="error_usertype">账号类型错误!</string>
+    <string name="error_relogin">异常登录,请重新登录!</string>
+    <string name="error_center_line">收到排队服务异常分配的客服：</string>
+    <string name="error_code">错误码：</string>
+    <string name="error_connect_camera">本地摄像头启动异常</string>
+    <string name="error_check_camera_open">检测到摄像头已被占用,请关闭后重新启动</string>
+
+    <!-- string  -->
+    <string name="s_quit_app">是否确定退出应用？</string>
+    <string name="s_ok">确认</string>
+    <string name="s_no">取消</string>
+    <string name="s_validate">请输入</string>
+    <string name="s_ip_error">您输入的IP格式有误</string>
+    <string name="s_exit_msg">正在结束通话…</string>
+    <string name="s_headset_find">耳机已插入</string>
+    <string name="s_headset_out">耳机已拔出</string>
+    <string name="s_avcon">华平信息技术有限公司</string>
+    <string name="s_evcall">在线金融服务</string>
+    <string name="s_no_business">暂未开放,敬请期待…</string>
+    <string name="s_no_business1">未开放</string>
+    <string name="s_geting">呼叫业务&#160;</string>
+    <string name="s_center_server">&#160;中</string>
+    <string name="s_idx_prefix">您现在排在第&#160;</string>
+    <string name="s_idx_suffix">&#160;位</string>
+    <string name="s_line_prefix">已分配客服&#160;</string>
+    <string name="s_line_suffix">&#160;正在连线</string>
+    <string name="s_line2_prefix">等待客服&#160;</string>
+    <string name="s_line2_suffix">&#160;接听中</string>
+    <string name="s_user_hangup">对方已挂断</string>
+    <string name="s_user_answer">&#160;已接听,视频接通中</string>
+    <string name="s_server_pause">服务暂停片刻,请稍等!</string>
+    <string name="s_only_audio">音频通话模式</string>
+    <string name="s_evaluate_no">&#160;秒后默认不评价</string>
+    <string name="s_server_offline">无在线的客服人员</string>
+    <string name="txt_aboutours">\t\t\t\tAVCON交互式网络视频服务系统采用互联网云技术组网技术，实现视频交互与呼叫中心的完美融合，并结合全程协助、数字身份认证等多种技术手段，可充分满足用户实现运营极大规模视频服务平台的建设要求。
+\r\n\t\t\t\t同时系统提供开放的通讯接口，可实现与业务系统进行尝试融合，进而实现业务模式的“可视化、远程化”应用创新，巩固传统经营渠道，延长有效经营时间，延伸虚拟经营空间。
+\r\n\t\t\t\t华平本着“普惠金融”的战略目标，将卓越的多媒体通信技术与银行业务深度融合，推出特色化的视频银行系统，帮助银行实现“轻型银行”的战略转型，全力打造“直销银行”下的“新常态生态文化圈”。</string>
+    <string name="s_version">（技术支持:云帧信息）</string>
+    <string name="speech">开始录音</string>
+    <string name="recording">正在录音</string>
+    <string name="analyzing">开始识别</string>
+    <string name="error">识别错误</string>
+    <string name="search_car">搜索品牌/车系问题</string>
+</resources>

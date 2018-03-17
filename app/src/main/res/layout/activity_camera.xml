@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".cameraEncode.CameraActivity_Normal">
+
+    <Button
+        android:text="发送"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="rev" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SurfaceView
+            android:id="@+id/camera_surface_send"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="300dp" />
+
+        <SurfaceView
+            android:id="@+id/camera_surface_rev"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="300dp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/head_bk"
+        android:id="@+id/img_show"
+        android:layout_width="400dp"
+        android:layout_height="200dp" />
+
+
+</LinearLayout>

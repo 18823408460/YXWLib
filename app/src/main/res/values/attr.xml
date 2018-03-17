@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="unReachColor" format="color"/>
+    <attr name="reachColor" format="color"/>
+    <attr name="textColor" format="color"/>
+    <attr name="textSize" format="dimension"/>
+
+     <declare-styleable name="progressHor">
+         <attr name="unReachColor"></attr>
+         <attr name="reachColor"></attr>
+         <attr name="textColor"></attr>
+         <attr name="textSize"></attr>
+     </declare-styleable>
+
+    <declare-styleable name="camera">
+        <attr name="front" format="boolean" />
+        <attr name="preview_width" format="integer" />
+        <attr name="preview_height" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="indicator">
+        <attr name="style_type">
+            <enum name="circle" value="0" />
+            <enum name="strip" value="1" />
+        </attr>
+        <attr name="one_page_hide" format="boolean" />
+    </declare-styleable>
+</resources>

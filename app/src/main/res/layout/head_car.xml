@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ff0000"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        app:layout_widthPercent="10%"
+        app:layout_heightPercent="10%"
+        android:src="@drawable/cross"
+        />
+    <SearchView
+        android:id="@+id/search_car"
+        android:queryHint="@string/search_car"
+        android:gravity="center"
+        android:background="#ffffaa"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_widthPercent="70%"
+        app:layout_heightPercent="10%"
+        />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="10%"
+        app:layout_heightPercent="10%"
+        android:src="@mipmap/ic_launcher"
+        />
+</android.support.percent.PercentRelativeLayout>

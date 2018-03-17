@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/g1">
+        <item
+            android:title="爱好"
+            android:icon="@mipmap/ic_launcher"
+            android:id="@+id/f1">
+        </item>
+        <item
+            android:title="爱好1"
+            android:icon="@mipmap/ic_launcher"
+            android:id="@+id/f2">
+        </item>
+    </group>
+
+    <group android:id="@+id/g2">
+        <item
+            android:title="爱好"
+            android:icon="@mipmap/ic_launcher"
+            android:id="@+id/f3">
+        </item>
+        <item
+            android:title="爱好4"
+            android:icon="@mipmap/ic_launcher"
+            android:id="@+id/f4">
+        </item>
+    </group>
+</menu>

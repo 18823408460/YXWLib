@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="startEn"
+        android:text="开始英文识别"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="startCn"
+        android:text="开始中文识别"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/showmsg"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

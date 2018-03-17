@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_input"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/send_result"
+        android:text="@string/send_result"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/wake_test"
+        android:id="@+id/wake_test"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/sensor_test"
+        android:id="@+id/sensor_test"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/pad_test"
+        android:id="@+id/pad_test"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/socket_test"
+        android:id="@+id/socket_test"
+        android:layout_height="wrap_content" />
+</LinearLayout>

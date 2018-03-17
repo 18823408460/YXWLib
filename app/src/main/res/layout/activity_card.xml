@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:id="@+id/cardView1"
+        app:cardBackgroundColor="#00ff00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cardview1" />
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff10" >
+        <Button
+            android:layout_width="match_parent"
+            android:text="butn"
+            android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff10" >
+        <Button
+            android:layout_width="match_parent"
+            android:text="butn111"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:elevation="2dp"
+        android:translationZ="5dp"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.uurobot.yxwlib.MainActivity">
+
+
+ <com.uurobot.yxwlib.view.ProgressHor
+     app:unReachColor = "#00ff00"
+     app:reachColor = "#ff0000"
+     app:textColor = "#0000ff"
+     app:textSize = "15sp"
+     android:id="@+id/progressHor"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"/>
+
+</LinearLayout>

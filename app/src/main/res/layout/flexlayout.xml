@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap">
+
+        <TextView
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="1.水陆草木之花"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="2.可爱者甚蕃"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="3.晋陶渊明独爱菊"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="4.自李唐来"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="5.世人甚爱牡丹"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="6.予独爱不染"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="7.濯清涟而不妖"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="8.中通外直"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="9.不蔓不枝"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="10.香远益清"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@mipmap/ic_launcher"
+            android:padding="8dp"
+            android:text="11.亭亭净植"/>
+    </com.google.android.flexbox.FlexboxLayout>
+</RelativeLayout>

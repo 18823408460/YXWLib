@@ -1,0 +1,38 @@
+<resources>
+    <dimen name="text_px2">10px</dimen>
+    <dimen name="text_px3">13px</dimen>
+    <dimen name="text_px4">15px</dimen>
+	<dimen name="text_px5">18px</dimen>
+	<dimen name="text_defaultPx6">20px</dimen>
+	<dimen name="text_px7">25px</dimen>
+    <dimen name="text_px8">30px</dimen>
+	<dimen name="text_px9">35px</dimen>
+    <dimen name="text_px10">40px</dimen>
+    
+    <dimen name="activity_vertical_margin">40px</dimen>
+    <dimen name="activity_horizontal_margin">40px</dimen>
+
+    <!-- 业务界面 -->
+    <dimen name="b_list_padding">20px</dimen>
+    <dimen name="b_list_divider_height">10px</dimen>
+    <dimen name="b_list_item_height">100px</dimen>
+    <dimen name="b_list_item_margin">75px</dimen>
+    <dimen name="b_list_item_btn_width">75px</dimen>
+    <dimen name="b_list_item_btn_height">50px</dimen>
+    
+    
+    <!-- 视频界面 -->
+    <dimen name="v_line_head_padding">20px</dimen>
+    <dimen name="v_line_head_margin">20px</dimen>
+    <dimen name="v_line_btn_margin">30px</dimen>
+    <dimen name="v_btn_width">70px</dimen>
+    <dimen name="v_btn_height">70px</dimen>
+    <dimen name="v_width_local">300px</dimen>
+    <dimen name="v_height_local">168px</dimen>
+    <dimen name="v_margin_local">5px</dimen>
+    <dimen name="v_width_pause_img">100px</dimen>
+    <dimen name="v_height_pause_img">100px</dimen>
+    <dimen name="v_margin_msg">70px</dimen>
+    <dimen name="v_margin_btn">14dp</dimen>
+
+</resources>

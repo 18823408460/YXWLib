@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorN">#ffffff</color>
+
+    <color name="colorPrimary">#d5a8ef</color>
+    <color name="colorPrimaryDark">#ea93c5</color>
+    <color name="colorAccent">#689aec</color>
+    <color name="black">#060606</color>
+    <color name="red">#9f0303</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkGray">#808080</color>
+    <color name="blue">#0000FF</color>
+    <!-- 自定义颜色 -->
+    <color name="head_bg">#3d6399</color> <!-- 头部背景颜色 -->
+    <color name="call_waiting_head_bg">#949191</color> <!-- 排队等待背景颜色 -->
+    <color name="index_btn_bg">#8bb2f2</color><!-- 首页广告的按钮背景颜色 -->
+    <color name="index_btn_bg2">#77a3ec</color><!-- 首页广告的按钮背景颜色 -->
+    <color name="index_btn_frame">#5896ed</color><!-- 首页广告的按钮边框颜色 -->
+    <color name="index_btn_frame2">#4d50f5</color><!-- 首页广告的按钮边框颜色 -->
+    <color name="dot_bg">#06b2f1</color><!-- tab页面点的颜色 -->
+    <color name="dot_bg2">#fcfbfb</color><!-- tab页面点的颜色 -->
+    <color name="evalute_btn_bg">#537dc7</color><!-- 评价按钮的颜色 -->
+    <color name="evalute_btn_bg2">#4567a3</color><!-- 评价按钮的颜色 -->
+    <color name="evalute_btn_frame">#fcfbfb</color><!-- 评价按钮边框的颜色 -->
+    <color name="evalute_btn_frame2">#fcfbfb</color><!-- 评价按钮边框的颜色 -->
+    <color name="layout_content_black">#141415</color>
+    <color name="pause">#B4CDE6</color>
+    <color name="gray">#ff4a4a4a</color>
+    <color name="calling">#FFc9c9c9</color>
+    <color name="line_bg">#a19f9f</color>
+    <color name="bg_evaluate">#00000000</color>
+</resources>
