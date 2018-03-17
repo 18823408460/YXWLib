@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".car.CarMainActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         app:layout_widthPercent="100%"
         app:layout_heightPercent="20%"
-        android:background="#ffffaa"
+        android:background="#aaffaa"
         android:layout_below="@+id/head_car"
         />
     <android.support.v4.view.ViewPager
@@ -33,7 +34,15 @@
         android:layout_below="@id/tablayout_car"
         app:layout_widthPercent="100%"
         app:layout_heightPercent="100%"
+        android:layout_above="@+id/bottom_car"
         />
 
-
+    <include
+        android:id="@+id/bottom_car"
+        layout="@layout/bottom_car"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="100%" />
 </RelativeLayout>

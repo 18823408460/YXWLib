@@ -22,6 +22,7 @@
         android:gravity="center"
         android:background="#ffffaa"
         android:layout_width="0dp"
+        android:iconifiedByDefault="false"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true"
         app:layout_widthPercent="70%"

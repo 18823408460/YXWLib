@@ -34,15 +34,19 @@ public class TabLayoutFragment extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-                View inflate = inflater.inflate(R.layout.fragment_car, container, true);
+
+                // 这里只能传递false，否则报错 ？？？？？？？？？？？？？？？？？
+                View inflate = inflater.inflate(R.layout.fragment_car, container, false);
                 bind = ButterKnife.bind(this, inflate);
                 initView(inflate);
-                return super.onCreateView(inflater, container, savedInstanceState);
+                return inflate;
         }
 
         private void initView(View inflate) {
                 Log.e(TAG, "initView: "+type );
-                framentTvCar.setText("这是==="+CarMainActivity.tabTitle[type]);
+//                TextView textView = inflate.findViewById(R.id.frament_tv_car);
+//                textView.setText(CarMainActivity.tabTitle[type]);
+                 framentTvCar.setText("这是="+CarMainActivity.tabTitle[type]);
         }
 
 

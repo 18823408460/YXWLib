@@ -98,4 +98,9 @@
     <string name="analyzing">开始识别</string>
     <string name="error">识别错误</string>
     <string name="search_car">搜索品牌/车系问题</string>
+    <string name="car_first">首页</string>
+    <string name="car_second">论坛</string>
+    <string name="car_three">选车</string>
+    <string name="car_four">车库</string>
+    <string name="car_five">我</string>
 </resources>

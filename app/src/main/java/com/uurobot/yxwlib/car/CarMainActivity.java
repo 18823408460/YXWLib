@@ -25,6 +25,9 @@ import butterknife.ButterKnife;
 
 public class CarMainActivity extends BaseActivity {
         public static final String[] tabTitle = new String[]{"综艺1","体育2","新闻3","热点4","头条5","军事6","历史7","科技8","人文9"};
+        @BindView(R.id.search_car)
+        SearchView searchCar;
+
         @BindView(R.id.left)
         ImageView left;
 
@@ -36,9 +39,6 @@ public class CarMainActivity extends BaseActivity {
 
         @BindView(R.id.viewPager_car)
         ViewPager viewPagerCar;
-
-        @BindView(R.id.search_car)
-        SearchView searchCar;
 
         TabAdapter tabAdapter ;
 
