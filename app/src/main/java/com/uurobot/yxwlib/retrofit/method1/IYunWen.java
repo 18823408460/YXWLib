@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 
 public interface IYunWen {
     /**
-     * »ñÈ¡  token
+     * è·å–  token
      * @param appid
      * @param secret
      * @return

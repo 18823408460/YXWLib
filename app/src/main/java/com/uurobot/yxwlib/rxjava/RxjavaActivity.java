@@ -8,9 +8,9 @@ import com.uurobot.yxwlib.R;
 import com.uurobot.yxwlib.alarm.Logger;
 import com.uurobot.yxwlib.robot.EventDispatchMgr;
 
-import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Func0;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.subjects.Subject;
 
 
 /**
@@ -30,9 +30,55 @@ public class RxjavaActivity extends Activity {
         }
 
         private void testRxjava1() {
-                Rxutil.getLoginfo("yinxiaowei").subscribe(new Subscriber<String>() {
+//                Rxutil.getLoginfo("yinxiaowei").subscribe(new Subscriber<String>() {
+//                        @Override
+//                        public void onCompleted() {
+//
+//                        }
+//
+//                        @Override
+//                        public void onError(Throwable e) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onNext(String s) {
+//                                Logger.e(TAG,"onNext========"+s + "   "+Thread.currentThread().getName());
+//                        }
+//                });
+                Rxutil.getLoginfo("").subscribe(new Subject<String>() {
                         @Override
-                        public void onCompleted() {
+                        public boolean hasObservers() {
+                                return false;
+                        }
+
+                        @Override
+                        public boolean hasThrowable() {
+                                return false;
+                        }
+
+                        @Override
+                        public boolean hasComplete() {
+                                return false;
+                        }
+
+                        @Override
+                        public Throwable getThrowable() {
+                                return null;
+                        }
+
+                        @Override
+                        protected void subscribeActual(Observer<? super String> observer) {
+
+                        }
+
+                        @Override
+                        public void onSubscribe(Disposable d) {
+
+                        }
+
+                        @Override
+                        public void onNext(String s) {
 
                         }
 
@@ -42,42 +88,44 @@ public class RxjavaActivity extends Activity {
                         }
 
                         @Override
-                        public void onNext(String s) {
-                                Logger.e(TAG,"onNext========"+s + "   "+Thread.currentThread().getName());
+                        public void onComplete() {
+
                         }
                 });
+
+
         }
 
 
         String text = "";
         private void testRxjava(){
 
-                final Observable<String> observable = Observable.defer(new Func0<Observable<String>>() {
-                        @Override
-                        public Observable<String> call() {
-                                return Observable.from(text.split("e"));
-                        }
-                });
-                text = "hello";
-                Subscriber<String> stringSubscriber = new Subscriber<String>() {
-                        @Override
-                        public void onCompleted() {
-
-                        }
-
-                        @Override
-                        public void onError(Throwable e) {
-
-                        }
-
-                        @Override
-                        public void onNext(String s) {
-                                EventDispatchMgr.getEventDispatchMgr().getMode().handlerRecognizer(s);
-                                Logger.e(TAG,"-----------------------onNext=="+s);
-                        }
-                };
-
-                observable.subscribe(stringSubscriber);
+//                final Observable<String> observable = Observable.defer(new Func0<Observable<String>>() {
+//                        @Override
+//                        public Observable<String> call() {
+//                                return Observable.from(text.split("e"));
+//                        }
+//                });
+//                text = "hello";
+//                Subscriber<String> stringSubscriber = new Subscriber<String>() {
+//                        @Override
+//                        public void onCompleted() {
+//
+//                        }
+//
+//                        @Override
+//                        public void onError(Throwable e) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onNext(String s) {
+//                                EventDispatchMgr.getEventDispatchMgr().getMode().handlerRecognizer(s);
+//                                Logger.e(TAG,"-----------------------onNext=="+s);
+//                        }
+//                };
+//
+//                observable.subscribe(stringSubscriber);
         }
 
         private String test(){
