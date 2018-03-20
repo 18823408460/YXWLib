@@ -16,11 +16,18 @@
     <!--android:layout_height="match_parent" />-->
 
 
-    <ce
+    <Button
         android:id="@+id/onClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
         android:text="@string/rxjava" />
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross"
+        />
 
 </LinearLayout>

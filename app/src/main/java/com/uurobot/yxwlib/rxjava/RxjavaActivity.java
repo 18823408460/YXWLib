@@ -3,6 +3,7 @@ package com.uurobot.yxwlib.rxjava;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.uurobot.yxwlib.R;
 import com.uurobot.yxwlib.alarm.Logger;
@@ -46,7 +47,7 @@ public class RxjavaActivity extends Activity {
 //                                Logger.e(TAG,"onNext========"+s + "   "+Thread.currentThread().getName());
 //                        }
 //                });
-                Rxutil.getLoginfo("").subscribe(new Subject<String>() {
+                Rxutil.getLoginfo("helloName").subscribe(new Subject<String>() {
                         @Override
                         public boolean hasObservers() {
                                 return false;
@@ -79,7 +80,7 @@ public class RxjavaActivity extends Activity {
 
                         @Override
                         public void onNext(String s) {
-
+                                Log.e(TAG, "onNext: "+s );
                         }
 
                         @Override

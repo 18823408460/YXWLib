@@ -90,6 +90,8 @@ dependencies {
 
 
     compile 'org.jsoup:jsoup:1.9.2'
+
+    compile 'com.sackcentury:shinebutton:0.2.0'
     // implementation 'com.google.cloud:google-cloud:0.38.0-alpha'
 }
 
