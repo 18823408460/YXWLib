@@ -47,11 +47,11 @@ public class CarMainActivity extends BaseActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_car);
                 ButterKnife.bind(this);
-
                 List<Fragment> fragments = new ArrayList<>();
                 for (int i=0,len = tabTitle.length; i<len ; i++){
                         fragments.add(TabLayoutFragment.newInstance(i));
                 }
+
                 tabAdapter = new TabAdapter(getSupportFragmentManager(),fragments);
 
                 viewPagerCar.setAdapter(tabAdapter);

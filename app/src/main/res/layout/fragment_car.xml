@@ -13,4 +13,10 @@
         app:layout_widthPercent="100%"
         app:layout_heightPercent="10%"
         />
+
+     <Button
+         android:text="@string/analyzing"
+         android:layout_width="wrap_content"
+         android:textColor="@color/bottom_tv_color"
+         android:layout_height="wrap_content" />
 </RelativeLayout>

@@ -7,76 +7,46 @@
     android:orientation="horizontal">
 
     <TextView
-        android:clickable="true"
         android:id="@+id/bottom_car_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:drawableTop="@mipmap/ic_launcher"
-        android:gravity="center"
+        style="@style/myTv"
         android:text="@string/car_first"
-        android:textColor="@color/bottom_tv_color"
-        android:textSize="20sp"
         app:layout_heightPercent="14%"
         app:layout_widthPercent="20%" />
 
     <TextView
         android:id="@+id/bottom_car_2"
-        android:clickable="true"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/bottom_car_1"
-        android:layout_weight="1"
         android:drawableTop="@mipmap/ic_launcher"
-        android:gravity="center"
         android:text="@string/car_second"
-        android:textColor="@color/bottom_tv_color"
-        android:textSize="20sp"
+        style="@style/myTv"
         app:layout_heightPercent="14%"
         app:layout_widthPercent="20%" />
 
     <TextView
         android:id="@+id/bottom_car_3"
-        android:clickable="true"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/bottom_car_2"
-        android:layout_weight="1"
         android:drawableTop="@mipmap/ic_launcher"
-        android:gravity="center"
         android:text="@string/car_three"
-        android:textColor="@color/bottom_tv_color"
-        android:textSize="20sp"
+        style="@style/myTv"
         app:layout_heightPercent="14%"
         app:layout_widthPercent="20%" />
 
     <TextView
         android:id="@+id/bottom_car_4"
-        android:clickable="true"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/bottom_car_3"
-        android:layout_weight="1"
-        android:drawableTop="@mipmap/ic_launcher"
-        android:gravity="center"
         android:text="@string/car_four"
-        android:textColor="@color/bottom_tv_color"
-        android:textSize="20sp"
+        android:drawableTop="@mipmap/ic_launcher"
+        style="@style/myTv"
         app:layout_heightPercent="14%"
         app:layout_widthPercent="20%" />
 
     <TextView
-        android:clickable="true"
         android:id="@+id/bottom_car_5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/bottom_car_4"
-        android:layout_weight="1"
         android:drawableTop="@mipmap/ic_launcher"
-        android:gravity="center"
         android:text="@string/car_five"
-        android:textColor="@color/bottom_tv_color"
-        android:textSize="20sp"
+        style="@style/myTv"
         app:layout_heightPercent="14%"
         app:layout_widthPercent="20%" />
 
