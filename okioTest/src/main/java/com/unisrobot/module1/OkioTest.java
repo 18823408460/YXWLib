@@ -19,6 +19,15 @@ import okio.Source;
 public class OkioTest {
 
         public static void main(String[] args) {
+                testOKio();
+
+        }
+
+
+        private static void testThreadLocal(){
+        }
+
+        private static void testOKio() {
                 File file = new File("test.txt");
                 if (!file.exists()){
                         try {
@@ -63,9 +72,5 @@ public class OkioTest {
                 catch (IOException e) {
                         e.printStackTrace();
                 }
-
-
-
-
         }
 }

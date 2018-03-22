@@ -18,10 +18,9 @@ public class LocalThreadActivity extends AppCompatActivity {
         protected void onCreate(@Nullable Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
 
-                ThreadLocal<String> threadLocal = new ThreadLocal<>();
-                threadLocal.set("hello");
+                LocalInstance.getInstance().setData("helooworld");
                 LocalTest localTest = new LocalTest();
-                Log.e(TAG, "onCreate: "+threadLocal.get() );
+                Log.e(TAG, "onCreate: "+LocalInstance.getInstance().getData() );
 
         }
 }
