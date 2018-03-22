@@ -103,4 +103,5 @@
     <string name="car_three">选车</string>
     <string name="car_four">车库</string>
     <string name="car_five">我</string>
+    <string name="swicth">切换dot</string>
 </resources>

@@ -92,6 +92,11 @@ dependencies {
     compile 'org.jsoup:jsoup:1.9.2'
 
     compile 'com.sackcentury:shinebutton:0.2.0'
+
+    //图片轮播
+    compile 'com.jude:rollviewpager:1.2.9'
+
+
     // implementation 'com.google.cloud:google-cloud:0.38.0-alpha'
 }
 
