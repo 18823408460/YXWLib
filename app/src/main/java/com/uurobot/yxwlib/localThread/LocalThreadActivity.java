@@ -22,5 +22,15 @@ public class LocalThreadActivity extends AppCompatActivity {
                 LocalTest localTest = new LocalTest();
                 Log.e(TAG, "onCreate: "+LocalInstance.getInstance().getData() );
 
+                new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                                LocalInstance.getInstance().setData("helooworld---childThread");
+                                Log.e(TAG, "run: "+LocalInstance.getInstance().getData() );
+                        }
+                }).start();
+
+
+                Log.e(TAG, "111onCreate: "+LocalInstance.getInstance().getData() );
         }
 }
