@@ -104,4 +104,9 @@
     <string name="car_four">车库</string>
     <string name="car_five">我</string>
     <string name="swicth">切换dot</string>
+    <string name="dialog">测试dialog</string>
+    <string name="content">concnet</string>
+    <string name="comfirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="more">更多信息</string>
 </resources>

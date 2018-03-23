@@ -40,14 +40,6 @@
     </style>
 
 
-
-
-
-
-
-
-
-
     <!-- DevideIntoGroupActivity -->
     <style name="MyDialogStyle" parent="@android:style/Theme.Holo.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -74,5 +66,11 @@
         <item name="android:textSize">20sp</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="buttomDailog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dailog_in</item>
+        <item name="android:windowExitAnimation">@anim/dailog_out</item>
+
     </style>
 </resources>
