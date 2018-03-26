@@ -24,6 +24,8 @@ import butterknife.OnClick;
 public class CarMainActivity extends BaseActivity {
 
         private static final String TAG = "CarMainActivity";
+        private static final int page_one = 1 ;
+        private static final int page_two = 2 ;
         public static final String[] tabTitle = new String[]{"综艺1", "体育2", "新闻3", "热点4", "头条5", "军事6", "历史7", "科技8", "人文9"};
 
         @BindView(R.id.search_car)
@@ -39,6 +41,7 @@ public class CarMainActivity extends BaseActivity {
         FrameLayout frameLayout;
 
         FirstFragment firstFragment;
+
         SecondeFragment secondeFragment;
 
         @BindView(R.id.bottom_car_1)
@@ -55,8 +58,12 @@ public class CarMainActivity extends BaseActivity {
 
         @BindView(R.id.bottom_car_5)
         TextView bottomCar5;
+
         FragmentManager supportFragmentManager;
-        int index =1 ;
+
+
+        int index = 1;
+
         @Override
         protected void onCreate(@Nullable Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -64,35 +71,62 @@ public class CarMainActivity extends BaseActivity {
                 ButterKnife.bind(this);
 
 
-                firstFragment = new FirstFragment();
-                secondeFragment = new SecondeFragment();
-                 supportFragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, firstFragment).commit();
+                supportFragmentManager = getSupportFragmentManager();
+                showFragment(page_one);
                 bottomCar1.setPressed(true);
         }
 
         @OnClick(R.id.bottom_car_1)
-        public void first(){
-               if (index != 1 ){
-                       FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
-                       fragmentTransaction.replace(R.id.frameLayout, firstFragment).commit();
-                       bottomCar1.setPressed(true);
-                       bottomCar2.setPressed(false);
-                       index =  1;
-                       Log.e(TAG, "first:  press");
-               }
+        public void first() {
+                if (index != 1) {
+                        showFragment(page_one);
+                        bottomCar1.setPressed(true);
+                        bottomCar2.setPressed(false);
+                        index = 1;
+                        Log.e(TAG, "first:  press");
+                }
         }
 
         @OnClick(R.id.bottom_car_2)
-        public void second(){
-                if (index != 2 ){
-                        FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frameLayout, secondeFragment).commit();
+        public void second() {
+                if (index != 2) {
+                        showFragment(page_two);
                         bottomCar1.setPressed(false);
                         bottomCar2.setPressed(true);
-                        index =  2 ;
-                        Log.e(TAG, "second: press" );
+                        index = 2;
+                        Log.e(TAG, "second: press");
                 }
+        }
+
+        private void showFragment(int index){
+                FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
+                if (firstFragment!=null){
+                        fragmentTransaction.hide(firstFragment);
+                }
+                if (secondeFragment!=null){
+                        fragmentTransaction.hide(secondeFragment);
+                }
+                this.index = index ;
+                switch (index){
+                        case  page_one:
+                                if (firstFragment == null){
+                                        firstFragment = new FirstFragment();
+                                        fragmentTransaction.add(R.id.frameLayout,firstFragment);
+                                }else {
+                                        fragmentTransaction.show(firstFragment);
+                                }
+                                break;
+                        case page_two :
+                                if (secondeFragment == null){
+                                        secondeFragment = new SecondeFragment();
+                                        fragmentTransaction.add(R.id.frameLayout,secondeFragment);
+                                }else {
+                                        fragmentTransaction.show(secondeFragment);
+                                }
+                                break;
+                }
+
+                // fragment 提交的四个方法的区别？？？？？？
+                fragmentTransaction.commitAllowingStateLoss();
         }
 }
