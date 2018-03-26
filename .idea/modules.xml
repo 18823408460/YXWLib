@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YXWLib.iml" filepath="$PROJECT_DIR$/YXWLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liveTv/liveTv.iml" filepath="$PROJECT_DIR$/liveTv/liveTv.iml" />
     </modules>
   </component>
 </project>

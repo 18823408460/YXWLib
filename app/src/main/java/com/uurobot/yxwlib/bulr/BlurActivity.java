@@ -49,7 +49,7 @@ public class BlurActivity extends Activity {
                         /*.onClick(new BlurPopWin.PopupCallback() {
                             @Override
                             public void onClick(@NonNull BlurPopWin blurPopWin) {
-                                Toast.makeText(MainActivity.this, "中间被点了", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LiveTvMainActivity.this, "中间被点了", Toast.LENGTH_SHORT).show();
                                 blurPopWin.dismiss();
                             }
                         })*/.show(button);

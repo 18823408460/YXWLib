@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">YXWLib</string>
 
+    <string name="action_switch">开关</string>
+    <string name="action_cut">切换</string>
 
     <string name="time_format">yyyy年MM月dd日HH点mm分</string>
     <string name="it_is_time_to">现在是%1$s,到时间%2$s了</string>

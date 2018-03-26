@@ -103,6 +103,9 @@ dependencies {
 
     //各种dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    compile project(':liveTv')
 }
 
 

@@ -44,7 +44,7 @@ import top.zibin.luban.Luban;
 
 public class MainActivity extends AppCompatActivity {
 
-        private static final String TAG = "MainActivity";
+        private static final String TAG = "LiveTvMainActivity";
         private Button  button ;
         LinJuChatUtil linJuChatUtil;
         EditText  editText ;
