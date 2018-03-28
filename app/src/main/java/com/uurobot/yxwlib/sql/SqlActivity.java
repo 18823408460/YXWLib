@@ -99,11 +99,18 @@ public class SqlActivity extends Activity {
                                 Logger.e(TAG, "---------2------");
                                 DB test = new DB(context.getApplicationContext());
                                 SQLiteDatabase writableDatabase = test.getWritableDatabase();
+                                try {
+                                        Thread.sleep(60000);
+                                }
+                                catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                }
                                 ContentValues valus = new ContentValues();
                                 Log.e(TAG, "run: "+writableDatabase.toString() );
                                 valus.put("name", "yxw");
                                 valus.put("age", 1);
                                 writableDatabase.insert(Cons.TABLE_NAME, null, valus);
+
                                 writableDatabase.close();
                         }
                 }).start();
@@ -113,6 +120,13 @@ public class SqlActivity extends Activity {
                                 Logger.e(TAG, "---------1------");
                                 DB test = new DB(context.getApplicationContext());
                                 SQLiteDatabase writableDatabase = test.getWritableDatabase();
+
+                                try {
+                                        Thread.sleep(60000);
+                                }
+                                catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                }
                                 Log.e(TAG, "run: "+writableDatabase.toString() );
                                 ContentValues valus = new ContentValues();
                                 valus.put("name", "yxw1");
