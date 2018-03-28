@@ -1,6 +1,8 @@
 package com.uurobot.yxwlib.mediaplayer;
 
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
+import android.media.TimedText;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -60,10 +62,11 @@ public class MediaPlayerTest extends BaseActivity {
 
                 boolean playing = mediaPlayer.isPlaying();//(随时调用)
                 Log.e(TAG, "testMediaplayer: "+playing );
-                FileDescriptor fd  = null;
+                AssetFileDescriptor fd  = null;
                 try {
-                        fd = getAssets().openFd("vivi3.mp4").getFileDescriptor();
-                        mediaPlayer.setDataSource(fd);
+                        fd = getAssets().openFd("test.mp4");
+                        // 如果要截取音频，可以这个处理
+                        mediaPlayer.setDataSource(fd.getFileDescriptor(),fd.getStartOffset(),fd.getLength()/2);
                 }
                 catch (IOException e) {
                         e.printStackTrace();
@@ -76,13 +79,32 @@ public class MediaPlayerTest extends BaseActivity {
                                 mediaPlayer.start();
                         }
                 });
+                mediaPlayer.prepareAsync();
                 mediaPlayer.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
                         @Override
                         public void onBufferingUpdate(MediaPlayer mp, int percent) {
                                 Log.e(TAG, "onBufferingUpdate: persent==="+percent );
                         }
                 });
-
+                mediaPlayer.setOnInfoListener(new MediaPlayer.OnInfoListener() {
+                        @Override
+                        public boolean onInfo(MediaPlayer mp, int what, int extra) {
+                                Log.e(TAG, "onInfo: "+what + "   "+extra );
+                                return false;
+                        }
+                });
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                                Log.e(TAG, "onCompletion: " );
+                        }
+                });
+                mediaPlayer.setOnTimedTextListener(new MediaPlayer.OnTimedTextListener() {
+                        @Override
+                        public void onTimedText(MediaPlayer mp, TimedText text) {
+                                Log.e(TAG, "onTimedText: "+text.getText() );
+                        }
+                });
 
         }
 
