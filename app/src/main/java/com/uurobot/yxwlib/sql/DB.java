@@ -28,7 +28,7 @@ public class DB extends SQLiteOpenHelper {
                         Cons.ID+" integer primary key autoincrement,"+
                         Cons.NAME+" varchar(20)," +
                         Cons.AGE+" integer)";
-                db.execSQL(sql);//执行sql语句
+                db.execSQL(sql);//执行sql语句，， 这里可以创建多个表。。。通过执行多个 sql
         }
 
         @Override
