@@ -3,9 +3,11 @@ package com.uurobot.yxwlib;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 
 import com.uurobot.yxwlib.hotfix.FixDexUtils;
@@ -17,12 +19,25 @@ import com.uurobot.yxwlib.hotfix.FixDexUtils;
 public class MainApplication extends Application {
         private static Context context ;
         private static final String TAG = "MainApplication";
+        private Handler handler = new Handler(Looper.getMainLooper()) ;
+
         @Override
         public void onCreate() {
                 super.onCreate();
                 context = this ;
                 FixDexUtils.loadFixedDex(this, Environment.getExternalStorageDirectory());
                  registerActivityListener();
+
+//                handler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                                Intent intent = new Intent(context,RefreshActivity.class);
+//                                intent.putExtra("d","d");
+//                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                                context.startActivity(intent);
+//                        }
+//                },2000);
+
         }
 
         public static Context getContext(){

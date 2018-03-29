@@ -45,7 +45,7 @@ public class SqlActivity extends Activity {
 
         @OnClick(R.id.sqlTest)
         public void sqlBtn() {
-                test();
+                testAyn();
         }
 
         @OnClick(R.id.sqlquery)
@@ -92,7 +92,17 @@ public class SqlActivity extends Activity {
                 }).start();
         }
 
-        private void test() {
+        /**
+         *
+         */
+        private void testTranct(){
+
+        }
+
+        /**
+         * 测试并发
+         */
+        private void testAyn() {
                 new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -100,7 +110,7 @@ public class SqlActivity extends Activity {
                                 DB test = new DB(context.getApplicationContext());
                                 SQLiteDatabase writableDatabase = test.getWritableDatabase();
                                 try {
-                                        Thread.sleep(60000);
+                                        Thread.sleep(6000);
                                 }
                                 catch (InterruptedException e) {
                                         e.printStackTrace();
@@ -110,29 +120,33 @@ public class SqlActivity extends Activity {
                                 valus.put("name", "yxw");
                                 valus.put("age", 1);
                                 writableDatabase.insert(Cons.TABLE_NAME, null, valus);
-
-                                writableDatabase.close();
+                                Logger.e(TAG, "---------2------end");
+                               // writableDatabase.close();
                         }
                 }).start();
+
+
                 new Thread(new Runnable() {
                         @Override
                         public void run() {
                                 Logger.e(TAG, "---------1------");
-                                DB test = new DB(context.getApplicationContext());
-                                SQLiteDatabase writableDatabase = test.getWritableDatabase();
-
                                 try {
-                                        Thread.sleep(60000);
+                                        Thread.sleep(1000);
                                 }
                                 catch (InterruptedException e) {
                                         e.printStackTrace();
                                 }
+                                DB test = new DB(context.getApplicationContext());
+                                SQLiteDatabase writableDatabase = test.getWritableDatabase();
+
+
                                 Log.e(TAG, "run: "+writableDatabase.toString() );
                                 ContentValues valus = new ContentValues();
                                 valus.put("name", "yxw1");
                                 valus.put("age", 3);
                                 writableDatabase.insert(Cons.TABLE_NAME, null, valus);
-                                writableDatabase.close();
+                                Logger.e(TAG, "---------1------end");
+                               // writableDatabase.close();
                         }
                 }).start();
 
@@ -140,7 +154,7 @@ public class SqlActivity extends Activity {
 //                        @Override
 //                        public void run() {
 //                                Logger.e(TAG, "timerTask.........." + Thread.currentThread().getName());
-//                                new DB(context, context.getFilesDir().getAbsolutePath() + "/test.db", 1).query();
+//                                new DB(context, context.getFilesDir().getAbsolutePath() + "/testAyn.db", 1).query();
 //                        }
 //                };
 //                new Timer().schedule(timerTask, 1000);

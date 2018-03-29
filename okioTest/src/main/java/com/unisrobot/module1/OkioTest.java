@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 
 import okio.BufferedSink;
 import okio.BufferedSource;
@@ -19,8 +20,22 @@ import okio.Source;
 public class OkioTest {
 
         public static void main(String[] args) {
-                testOKio();
+//                testOKio();
 
+                int data = 11 ;
+                ArrayList<Integer> index = getIndex(data);
+                System.out.println("index="+index);
+        }
+
+        private static ArrayList<Integer> getIndex(int data) {
+                ArrayList<Integer> ints = new ArrayList<>();
+                for (int i = 0; i < 12; i++) {
+                       if ((data & 0x01) == 1){
+                               ints.add(i);
+                       }
+                        data >>= 1;
+                }
+                return ints;
         }
 
 
