@@ -3,7 +3,9 @@ package com.uurobot.yxwlib.sql;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
+import com.uurobot.yxwlib.MainApplication;
 import com.uurobot.yxwlib.alarm.Logger;
 import com.uurobot.yxwlib.okhttp.yunwenTest.Constant;
 
@@ -12,12 +14,26 @@ import com.uurobot.yxwlib.okhttp.yunwenTest.Constant;
  */
 
 public class DB extends SQLiteOpenHelper {
+
+        private static final String TAG = "DB";
        // SQLiteDatabase  writableDatabase;
         private String name ;
         public DB(Context context) {
                 super(context, Cons.DATABASE_NAME, null, Cons.DATABASE_VERSION);
               //  writableDatabase = getWritableDatabase();
+                Log.e(TAG, "DB: construct");
+        }
 
+        private static DB instance ;
+        public  static DB getInstance(){
+                if (instance == null){
+                        synchronized (DB.class){
+                                if (instance == null){
+                                        instance = new DB(MainApplication.getContext());
+                                }
+                        }
+                }
+                        return new DB(MainApplication.getContext()) ;
         }
 
         @Override

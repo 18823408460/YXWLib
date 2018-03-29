@@ -14,4 +14,10 @@
         android:id="@+id/sqlquery"
         android:text="query"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/sqltranct"
+        android:text="tranct"
+        android:layout_height="wrap_content" />
 </LinearLayout>
