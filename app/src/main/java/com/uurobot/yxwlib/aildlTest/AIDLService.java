@@ -15,6 +15,13 @@ import com.uurobot.yxwlib.IRegister;
  */
 
 public class AIDLService extends Service {
+    private static AIDLService instance ;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        instance = this ;
+    }
 
     @Nullable
     @Override

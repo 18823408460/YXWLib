@@ -5,5 +5,7 @@ package com.uurobot.yxwlib;
  */
 
 public interface ICallBack {
+
+
     void onReceiver(String data);
 }
