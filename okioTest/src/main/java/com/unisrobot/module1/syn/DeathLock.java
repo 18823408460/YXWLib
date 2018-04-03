@@ -22,6 +22,7 @@ public class DeathLock {
         }
 
         private static void testDeathTest() {
+
                 System.out.println("A===" + A.hashCode());
                 System.out.println("B===" + B.hashCode());
                 Thread thread1 = new Thread(new Runnable() {
