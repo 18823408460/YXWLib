@@ -83,9 +83,9 @@
             </intent-filter>
         </receiver>
 
-        <provider
-            android:name=".alarm.AlarmProvider"
-            android:authorities="com.uurobot.yxwlib" />
+        <!--<provider-->
+            <!--android:name=".alarm.AlarmProvider"-->
+            <!--android:authorities="com.uurobot.yxwlib" />-->
 
         <receiver android:name=".Strategy.MyReceiver">
             <intent-filter>

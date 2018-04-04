@@ -37,4 +37,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="开关" />
+
+      <ToggleButton
+          android:textOff="off"
+          android:textOn="on"
+          android:layout_width="match_parent"
+          android:id="@+id/togglebutton"
+          android:layout_height="wrap_content" />
+
+      <ImageSwitcher
+          android:id="@+id/iamgeSwitch"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"></ImageSwitcher>
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
