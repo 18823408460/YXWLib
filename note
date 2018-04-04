@@ -8,8 +8,31 @@
 4. shape.xml  scrolllayout, drawable各种, 动画
 
 xml：
-drawale， shape ，anim
-
+drawable(xmlDrawable 13中类型)， shape ，anim
+:ColorDrawable
+:NinePatchDrawable 对于代码加载图片，作为背景时候，有时候我们需要加载 点9图，所以需要先判断一下，避免当初普通图片应用{
+                    ImageView im_0 = (ImageView) findViewById(R.id.im_0);
+                      final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.help_my_item);
+                      final byte[] chunk = bitmap.getNinePatchChunk();
+                      if (!NinePatch.isNinePatchChunk(chunk)) {
+                          Log.i("TAG", "不是 .9.png");
+                          im_0.setBackgroundDrawable(new BitmapDrawable(bitmap));
+                      } else {
+                          NinePatchDrawable d = new NinePatchDrawable(getResources(), bitmap, chunk, new Rect(), null);
+                          im_0.setBackgroundDrawable(d);
+                      }
+}
+:ShapeDrawable
+:GradientDrawable
+:BitmapDrawable
+:InsetDrawable
+:ClipDrawable
+:RotateDrawable
+:AnimationDrawable
+:LayerDrawable
+:LeverListDrawable
+:StateListDrawable
+:TransitionDrawable
 
 //博客
 http://blog.csdn.net/a347911/article/details/53317189         // threadlocal
