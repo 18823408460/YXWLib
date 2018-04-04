@@ -96,8 +96,7 @@ public class AllDialogActivity extends Activity {
                                         new Thread(new Runnable() {
                                                 @Override
                                                 public void run() {
-                                                        ToastUtil.getToastUtil().show("cancel");
-                                                }
+                                                        ToastUtil.getToastUtil().show("cancel"); }
                                         }).start();
 
                                 }
