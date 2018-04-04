@@ -7,8 +7,6 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import com.uurobot.yxwlib.ICallBack;
-import com.uurobot.yxwlib.IRegister;
 
 /**
  * Created by WEI on 2018/4/1.
