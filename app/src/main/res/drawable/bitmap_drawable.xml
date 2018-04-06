@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  antialias是否开启抗锯齿，一般开启
+       dither 是否开启 抖动模式，一般开启
+       filter 是否开启过滤效果，一般开启
+       mipMap 纹理映射，用的比较少，一般false
+        tileMode 平铺模式；
+   -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:antialias="true"
+    android:dither="true"
+    android:filter="true"
+    android:gravity="center"
+    android:mipMap="false"
+    android:src="@drawable/cross"
+    android:tileMode="repeat">
+
+
+</bitmap>
+

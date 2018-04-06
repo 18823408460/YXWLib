@@ -43,7 +43,7 @@ public class MainApplication extends Application {
 
 
     /**
-     * 倒计时功能
+     * 倒计时功能--- 使用不当，很容易造成内存泄漏。。。
      */
     private void timerTest() {
         /**

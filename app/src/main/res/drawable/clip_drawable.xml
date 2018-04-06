@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 在ClipsDrawable中level取值从0~10000.其中0表示ClipDrawable完全不能显示，10000表示完全显示
+
+ -->
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/cross">
+
+
+</clip>
+

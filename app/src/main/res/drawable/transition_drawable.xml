@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+TransitionDrawable transitionDrawable = (TransitionDrawable) imageView.getDrawable();
+transitionDrawable.startTransition(3000)
+-->
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/cross" />
+
+    <item android:drawable="@color/red" />
+</transition>
+
+

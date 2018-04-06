@@ -9,7 +9,8 @@
 
 xml：
 drawable(xmlDrawable 13中类型)， shape ，anim
-:ColorDrawable
+:ColorDrawable (以color节点开始的，都是 ColorDrawable，不管在哪个目录下面，详见 drawable下面的各种xml)
+
 :NinePatchDrawable 对于代码加载图片，作为背景时候，有时候我们需要加载 点9图，所以需要先判断一下，避免当初普通图片应用{
                     ImageView im_0 = (ImageView) findViewById(R.id.im_0);
                       final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.help_my_item);
@@ -22,17 +23,54 @@ drawable(xmlDrawable 13中类型)， shape ，anim
                           im_0.setBackgroundDrawable(d);
                       }
 }
-:ShapeDrawable
-:GradientDrawable
-:BitmapDrawable
-:InsetDrawable
-:ClipDrawable
-:RotateDrawable
-:AnimationDrawable
-:LayerDrawable
-:LeverListDrawable
-:StateListDrawable
-:TransitionDrawable
+:BitmapDrawable ： 对Bitmap进行了包装，增加了对bitmap的部分属性控制
+:ClipDrawable： ： 对Bitamp进行包装，用于剪切使用， 通过 ClipDrawable.setLevel设置裁剪比例
+:ShapeDrawable  :
+:GradientDrawable : 和 shapeDrawable的使用，标签几乎一样-- 查看Drwable类找到两个的区别？？？？？
+
+:RotateDrawable ： 旋转drawable，通过定时器 ，设置 Drawable的level，然后使用了该drawable的 view就会旋转。
+
+:InsetDrawable : 为一个充满整个屏幕的LinearLayout布局指定背景图，是否可以让背景图不充满屏幕？请用代码描述实现过程?? 可
+以使用嵌入(Inset)图像资源来指定图
+
+:LayerDrawable： 可以管理一组 drawable，然后会叠加显示。。
+》首个标签必须是layer-list
+》可以添加多个item, item的body中可以放置bitmap/shape标签, 先添加的item会放置在最底层
+》item属性：drawable: 图片源文件的引用
+》item属性id: 给每个item图片创建id, 一般没什么用, findViewById用, 这里没什么
+》item属性top: 图片资源距离顶部的距离 (单位是:dip/px/sp, 建议用dip/dp)
+》item属性right: 图片资源距离右边的距离
+》item属性bottom: 图片资源距离底部的距离
+》item属性left: 图片资源距离左边的距离
+
+:LeverListDrawable : LevelListDrawable对象提供一个Level值后，LevelListDrawable对象就会从前往后查看每一个<item>，
+当某个<item>节点的Level范围满足提供的那个Level值后，就会返回该<item>结点里指定的drawable。并且不会继续往后找,
+所以xml中设置的level，必须按照顺序（升降序来排列），同一个时刻只会有一个item显示
+
+// item的每一个 drawawble标签，都可以用其他的 自定义drawable来定义，放在 item的 body中
+:StateListDrawable: <selector>,当控件的状态-- 按下，松开，获取焦点，失去焦点。。
+
+:TransitionDrawable：一个TransitionDrawable是一个特殊的Drawable对象，可以实现两个drawable资源之间淡入淡出的效果，
+具体的动画效果需要通过来实现。。。
+
+:AnimationDrawable: <animation-list> 这个标签是放在 drawable下面，它是一个 zhu zhen 动画。。
+如果要实现 补件动画，就需要在 anim目录下面，通过<set,/ rotate 等来实现。。
+
+
+
+:PictureDrawable
+：RippleDrawable:水波效果,当控件使用RippleDrawable作为背景（android:background）且在控件可以接受点击动作
+（android:clickable="true"）的条件下，当按下或抬起手指时，会出现水波效果。效果如下图所示
+
+
+2.....res下面的各个目录的作用
+:res/color:color文件夹，在这个文件夹下放的是color_selector.xml等文件，主要是用于背景色的selector,selector设置的是color，
+而 drawable下的 selector 是 图片，，
+同时还要注意的是:像textColor和background属性引用到的文件不能乱引用，比如textColor引用了drawable_selector.xml，background引用了color_selector.xml会报错的。所以要注意使用。
+但是现在有个问题：假设Button现在想点击变成绿色，不点击变成红色，这时候怎么办?
+首先肯定要用background的属性-->那肯定就要用drawable_selector.xml文件引用，所以在drawable_selector_.xml
+中将android:drawable="@drawable/info_collect_btn_normal_bg"改成android:drawable="@color/not_pressed"即可
+
 
 //博客
 http://blog.csdn.net/a347911/article/details/53317189         // threadlocal
