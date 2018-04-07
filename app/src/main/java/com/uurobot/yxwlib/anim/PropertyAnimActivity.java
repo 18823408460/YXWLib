@@ -17,7 +17,10 @@ import com.uurobot.yxwlib.alarm.Logger;
  * Created by Administrator on 2017/11/20.
  */
 
-public class AnimActivity extends Activity {
+/**
+ * 属性动画: AnimationSet, ValueAnimation, ObjecttAnimation
+ */
+public class PropertyAnimActivity extends Activity {
 
         Button viewById;
 

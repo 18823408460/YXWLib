@@ -73,7 +73,22 @@ drawable(xmlDrawable 13中类型)， shape ，anim
 
 3. 自定义 drawable：
 
+4. 属性动画：（插值器，）
+> res/anim: 补间动画：
+xml文件里只有scale、rotate、translate、alpha、set五个标签，
+使用方法：
+1. 加载动画：animation = AnimationUtils.loadAnimation（R.anim.xxx）
+2. 设置动画：mView.setAnimation(animation)
+3. 开启动画：mView.startAnimation()
 
+> drawable: 可以存放帧动画。
+xml 中 帧动画的标签-- animation-list
+
+> res/animator: 属性动画：
+xml文件里有、set、objectAnimator,,animator三个标签，分别对应AnimatorSet、ObjectAnimator、ValueAnimator三个对象
+1. 加载动画：animation = AnimatorInflater.loadAnimator(R.animator.xxx)
+2. 设置动画：animation.setTarget(mView)
+3. 开启动画：animation .start()
 
 //博客
 http://blog.csdn.net/a347911/article/details/53317189         // threadlocal

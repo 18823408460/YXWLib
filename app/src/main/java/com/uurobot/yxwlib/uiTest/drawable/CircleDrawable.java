@@ -16,10 +16,11 @@ import android.support.annotation.Nullable;
  */
 
 /** 1.BitmapShader
- *
+ *  > 画笔 paint 在绘制东西时，需要为其设置色彩，如果是单纯的颜色 --- setColor，
+ *    而如果是复杂的图片，则需要通过着色器 shader 来添加纹理。。。
  *
  *  2.ColorFilter
- *
+ *  > 滤镜--- 对物体的色彩，饱和度，亮度，等的处理。。 涉及到颜色矩阵。。
  *
  *
  * 3 getOpacity  --- PixelFormat.TRANSLUCENT
