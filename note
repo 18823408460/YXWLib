@@ -71,6 +71,9 @@ drawable(xmlDrawable 13中类型)， shape ，anim
 首先肯定要用background的属性-->那肯定就要用drawable_selector.xml文件引用，所以在drawable_selector_.xml
 中将android:drawable="@drawable/info_collect_btn_normal_bg"改成android:drawable="@color/not_pressed"即可
 
+3. 自定义 drawable：
+
+
 
 //博客
 http://blog.csdn.net/a347911/article/details/53317189         // threadlocal
