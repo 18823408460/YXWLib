@@ -1,6 +1,8 @@
 package com.uurobot.yxwlib.uiTest.dialog;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -45,7 +47,15 @@ public class AllDialogActivity extends Activity {
         @OnClick(R.id.button6)
         public void setButton6() {
 //                choiceDialog();
-                testBottomDialog();
+                testMyDialog();
+        }
+
+        private void testMyDialog(){
+//                DialogFragment dialogFragment = new DialogFragment();
+
+                Dialog dialog = new Dialog(this,R.style.mydialog);
+                dialog.setContentView(R.layout.mydialog);
+                dialog.show();
         }
 
 
