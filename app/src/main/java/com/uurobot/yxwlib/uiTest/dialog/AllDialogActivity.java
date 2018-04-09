@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -52,9 +53,11 @@ public class AllDialogActivity extends Activity {
                 testMyDialog();
         }
 
+
+        // 自定义dialog 的大小只能通过 代码来控制，
+
         private void testMyDialog(){
 //                DialogFragment dialogFragment = new DialogFragment();
-
                 Dialog dialog = new Dialog(this,R.style.mydialog);
                 dialog.setContentView(R.layout.mydialog);
                 dialog.show();
@@ -63,6 +66,11 @@ public class AllDialogActivity extends Activity {
                 DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
                 attributes.width = (int) (displayMetrics.widthPixels*0.5);
                 attributes.height = (int) (displayMetrics.heightPixels*0.2);
+
+//                window.setGravity(Gravity.BOTTOM);
+//                attributes.x =
+//                attributes.y =  位置设置
+
                 window.setAttributes(attributes);
         }
 
