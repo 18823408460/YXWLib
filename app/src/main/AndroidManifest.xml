@@ -57,7 +57,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.uurobot.yxwlib.uiTest.dialog.AllDialogActivity"
+        <activity android:name="com.uurobot.yxwlib.mqtt.MqttActivity"
             android:theme="@style/AppTheme.NoActionBar">
             android:screenOrientation="portrait">
             <intent-filter>
@@ -102,6 +102,8 @@
         <service android:name=".google.VoiceCommandService">
         </service>
 
+
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
         <!--<activity_card-->
             <!--android:name=".Main2Activity"-->
             <!--android:label="@string/title_activity_main2"-->

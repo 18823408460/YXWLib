@@ -43,11 +43,9 @@ dependencies {
     })
     //    implementation 'io.reactivex.rxjava2:rxjava:2.0.0'
     //    implementation 'io.reactivex.rxjava2:rxandroid:2.0.0'
-//    implementation files('libs/okhttp-3.4.1.jar')
-//    implementation files('libs/okio-1.10.0.jar')
-    implementation files('libs/classes.jar' )
-
-
+    //    implementation files('libs/okhttp-3.4.1.jar')
+    //    implementation files('libs/okio-1.10.0.jar')
+    implementation files('libs/classes.jar')
     implementation 'com.google.android:flexbox:0.2.3'
     implementation 'com.android.support:appcompat-v7:22.2.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -73,42 +71,31 @@ dependencies {
     implementation files('libs/versioncontrol.jar')
     implementation files('libs/xutils.jar')
     implementation 'com.android.support:percent:22.2.0'
-
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     //implementation 'com.squareup.retrofit2:retrofit:2.0.2'
-
     implementation 'com.android.support:design:22.2.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
-
-    implementation "io.reactivex.rxjava2:rxjava:2.0.8"
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.8'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation 'com.squareup.retrofit2:retrofit:2.2.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
-
-
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0-RC3'
-
-
     implementation 'org.jsoup:jsoup:1.9.2'
-
     implementation 'com.sackcentury:shinebutton:0.2.0'
-
     //图片轮播
     implementation 'com.jude:rollviewpager:1.2.9'
-
     // ofo首次注册时的步骤控件
     implementation 'com.zqg:library:1.0.2'
     // implementation 'com.google.cloud:google-cloud:0.38.0-alpha'
-
     //各种dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-
     implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
     implementation project(':liveTv')
-
     //底部dialog
     implementation 'com.github.loonggg:BottomSheetPopupDialog:v1.0'
+    implementation files('libs/org.eclipse.paho.client.mqttv3.jar')
+    implementation files('libs/org.eclipse.paho.android.service.jar')
 }
 
 
