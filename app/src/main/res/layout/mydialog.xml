@@ -15,32 +15,36 @@
         tools:text="title" />
 
     <TextView
+        android:layout_below="@+id/mydialog_title"
+        android:layout_above="@+id/btm_main"
         tools:text="msg"
         android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#ff0000"
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:id="@+id/btm_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
+        android:layout_margin="4dp"
         android:background="@color/dot_bg"
         android:orientation="horizontal">
 
         <Button
-            android:layout_margin="10dp"
-            android:background="@drawable/mydailog_btn"
+            android:layout_margin="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/mydailog_btn_bk"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:text="@string/comfirm" />
 
         <Button
-            android:background="@drawable/mydailog_btn"
-            android:layout_margin="10dp"
+            android:background="@drawable/mydailog_btn_bk"
+            android:layout_margin="4dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

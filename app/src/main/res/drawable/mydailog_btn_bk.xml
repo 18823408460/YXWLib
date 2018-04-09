@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:andorid="http://schemas.android.com/apk/res/android">
+    <item andorid:state_pressed="true" andorid:drawable="@drawable/mydailog_btn_press"/>
+    <item andorid:state_pressed="false" andorid:drawable="@drawable/mydailog_btn"/>
+
+</selector>
