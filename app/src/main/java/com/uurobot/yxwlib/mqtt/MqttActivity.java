@@ -27,10 +27,15 @@ public class MqttActivity extends Activity {
                 new Thread(new Runnable() {
                         @Override
                         public void run() {
-                                Mqtt.getInstance(context).publish("topic1", "hello", 0);
+                                Mqtt.getInstance(context).publish("topic1", "尹晓伟", 0);
                         }
                 }).start();
-
+//                new Thread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                                ActiveMq.init();
+//                        }
+//                }).start();
         }
 
         private Context context;

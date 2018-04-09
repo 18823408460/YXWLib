@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 
 import com.uurobot.yxwlib.alarm.Logger;
+import com.uurobot.yxwlib.util.NetUtil;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
@@ -34,7 +35,9 @@ public class Mqtt {
 
         private MqttConnectOptions options;
 
-        private static final String BROKER_IP = "tcp://120.76.133.10:61613";
+
+//        private static final String BROKER_IP = "tcp://120.76.133.10:61613";
+        private static final String BROKER_IP = "tcp://120.76.133.10:1883";
 
         public static final String TOPIC1 = "topic1";
 
@@ -67,7 +70,7 @@ public class Mqtt {
 
         private Mqtt(Context context) {
 
-                clientId = UUID.randomUUID().toString();
+                clientId = NetUtil.getMacAddress();
 //                clientId = AndroidUniqueIdUtil.getUniqueID(context);
                 options = new MqttConnectOptions();
                 options.setCleanSession(false);
@@ -96,7 +99,11 @@ public class Mqtt {
 
                         @Override
                         public void messageArrived(String topic, MqttMessage message) throws Exception {
-                                Logger.i(TAG, "receiveMsg:topic" + topic + ",msg:" + message.toString());
+                                byte[] payload = message.getPayload();
+                                String s = new String(payload, "utf-8");
+                                String sgbk = new String(payload, "gbk");
+                                Logger.i(TAG, "receiveMsg:topic=" + topic + ",msg=" + s);
+                                Logger.i(TAG, "receiveMsg:topic=" + topic + ",sgbk=" + sgbk);
                         }
 
                         @Override

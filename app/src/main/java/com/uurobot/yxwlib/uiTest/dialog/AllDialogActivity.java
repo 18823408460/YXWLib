@@ -10,6 +10,8 @@ import android.support.constraint.ConstraintLayout;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -56,6 +58,12 @@ public class AllDialogActivity extends Activity {
                 Dialog dialog = new Dialog(this,R.style.mydialog);
                 dialog.setContentView(R.layout.mydialog);
                 dialog.show();
+                Window window = dialog.getWindow();
+                WindowManager.LayoutParams attributes = window.getAttributes();
+                DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+                attributes.width = (int) (displayMetrics.widthPixels*0.5);
+                attributes.height = (int) (displayMetrics.heightPixels*0.2);
+                window.setAttributes(attributes);
         }
 
 
