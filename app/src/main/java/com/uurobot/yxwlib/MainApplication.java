@@ -26,7 +26,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
-        FixDexUtils.loadFixedDex(this, Environment.getExternalStorageDirectory());
+        //FixDexUtils.loadFixedDex(this, Environment.getExternalStorageDirectory());
         registerActivityListener();
 
 //                handler.postDelayed(new Runnable() {
