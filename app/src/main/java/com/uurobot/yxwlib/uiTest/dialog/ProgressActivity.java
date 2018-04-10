@@ -1,6 +1,7 @@
 package com.uurobot.yxwlib.uiTest.dialog;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -36,19 +37,30 @@ public class ProgressActivity extends Activity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_progresstest);
                 ButterKnife.bind(this);
-
+                dialog = new Dialog(this,R.style.mydialog_progress);
         }
 
+        // dialog 默认就是居中显示，布局中写不写无所谓。。android:gravity="center" android_layoutGravity;
+        // 子控件要居中，需要子控件自己设置相关属性。
+
+        /**
+         *   android:layout_width="wrap_content" match_content 不起作用
+         *   android:layout_height="wrap_content"
+         */
+        private Dialog dialog ;
         @OnClick(R.id.button9)
         public void show() {
-                progressBar.setVisibility(View.VISIBLE);
-
-//                progressBar.showContextMenu()
-
+                // progressBar作为一个view，不是dialog，所以必须add到父布局中，然后通过显示隐藏的方法处理。
+//                progressBar = new ProgressBar(this);
+//                progressBar.setVisibility(View.VISIBLE);
+                dialog.setContentView(R.layout.dialog_progressbar);
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
         }
 
         @OnClick(R.id.button10)
         public void cancel() {
-                progressBar.setVisibility(View.INVISIBLE);
+//                progressBar.setVisibility(View.INVISIBLE);
+                dialog.cancel();
         }
 }

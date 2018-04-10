@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="#ff0000">
+    tools:background="#ff0000">
 
     <TextView
         android:id="@+id/dialog_progress_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="正在连接网络"
         tools:background="#00ff00" />
 
     <ProgressBar
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/dialog_progress_tv"
