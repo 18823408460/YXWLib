@@ -41,10 +41,10 @@ public class DrawPathView extends View {
                 paint.getTextPath(text, 0, text.length(), 0, paint.getTextSize(), mFontPath);
 
                 PathMeasure pathMeasure = new PathMeasure();
-                pathMeasure.setPath(mFontPath,false);
+                pathMeasure.setPath(mFontPath, false);
                 float length = pathMeasure.getLength();
-                while (pathMeasure.nextContour()){
-                        length += pathMeasure.getLength() ;
+                while (pathMeasure.nextContour()) {
+                        length += pathMeasure.getLength();
                 }
         }
 
@@ -56,20 +56,25 @@ public class DrawPathView extends View {
                 mPath.addCircle(110, 110, 45, Path.Direction.CCW);
                 mPath.addCircle(210, 210, 45, Path.Direction.CCW);
                 mPath.addCircle(320, 320, 45, Path.Direction.CCW);
-                canvas.drawPath(mPath,paint);
+                canvas.drawPath(mPath, paint);
 
 
                 Path path = new Path();
                 paint.setStyle(Paint.Style.STROKE);
                 paint.setStrokeWidth(3);
-                path.addRect(300.0f,500.0f,1200.0f,1400.0f,Path.Direction.CW);
+                path.addRect(300.0f, 500.0f, 1200.0f, 1400.0f, Path.Direction.CW);
 
-                canvas.drawPath(path,paint);
+                canvas.drawPath(path, paint);
                 paint.setTextSize(100);
                 paint.setColor(Color.BLUE);
 
                 // hOffet，文字距离路径的距离，如果文字过多，会在path的末尾叠加绘制
-                canvas.drawTextOnPath(text,path,0,20,paint);
+                canvas.drawTextOnPath(text, path, 0, 20, paint);
+
+
+                // ?? Picture 的使用场景：（联想camera中takePicture（））
+                // 1. 首先将要绘制的东西录制到Picture中(在view 的构造中)，（必须关闭硬件加速）
+                // 2. 将Picture中的东西绘制出来，（绘制的3中方式对比： Picture.draw(), Canvas.drawPicture(), PictuenDrawable--Canvas.draw(drawable)）
 //                canvas.drawPicture();
         }
 }
