@@ -56,6 +56,8 @@ public class ProgressActivity extends Activity {
                 dialog.setContentView(R.layout.dialog_progressbar);
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
+
+                // dialog 可以直接显示，是因为里面直接用了 WindowManager
         }
 
         @OnClick(R.id.button10)
