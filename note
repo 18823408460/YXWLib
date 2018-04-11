@@ -96,6 +96,15 @@ xml文件里有、set、objectAnimator,,animator三个标签，分别对应Anima
 
 4. dialog 代码设置大小？？
 
+5 。
+    // Rxjava2
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+
+//    // Rxjava
+//    compile 'io.reactivex:rxandroid:1.2.0'
+//    compile 'io.reactivex:rxjava:1.1.5'
+
 
 
 
