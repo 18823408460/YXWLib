@@ -39,7 +39,22 @@ public class AIDLService extends Service {
         }
     }
 
+
     //**********方法2 ***************************
     // public static abstract class Stub extends android.os.Binder implements com.unisrobot.uurobot_u5.IMyAidlInterface
 
+
+    //*************方法3**********************
+
+    /**
+     * 方法1 和 方法3 的区别：
+     *
+     * 这两段代码所实现的功能是一样的，但是通过Binder去实现，可以良好的处理对象之间引用的关系，避免内存泄露的出现。
+     * 如果以静态化去实现这个功能，你需要在没有程序需要使用Service，需要关闭Service时，把这个静态的引用给剔除掉，
+     * 而这一点反倒增加很多负担
+     */
+    private static AIDLService aidlService ;
+    public static AIDLService getInstance(){
+        return  aidlService ;
+    }
 }
