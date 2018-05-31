@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.uurobot.yxwlib.R;
 import com.uurobot.yxwlib.alarm.Logger;
+import com.uurobot.yxwlib.view.SwitchBtn;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,17 +37,13 @@ public class PropertyAnimActivity extends Activity {
 
         private static final String TAG = "PropertyAnimActivity";
 
-        @BindView(R.id.value)
-        Button value;
-
-        @BindView(R.id.anim_tv)
-        TextView animTv;
 
         @Override
         protected void onCreate(@Nullable Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_anim);
-                ButterKnife.bind(this);
+//                setContentView(R.layout.activity_anim);
+
+                setContentView(new SwitchBtn(this));
 
         }
 
@@ -63,56 +60,55 @@ public class PropertyAnimActivity extends Activity {
 //                ObjectAnimator.ofInt(value, "width", 500).setDuration(5000).start();
 
 //                AnimatorInflater.loadAnimator()
-                testObjAnim     ();
         }
 
-        private void testValueAnim() {
-                ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 200);
-                valueAnimator.setDuration(3000);
-                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                        @Override
-                        public void onAnimationUpdate(ValueAnimator animation) {
-                                Logger.e(TAG, "onAnimationUpdate=" + animation.getAnimatedValue());
-                                Integer animatedValue = (Integer) animation.getAnimatedValue();
-                                animTv.layout(0 + animatedValue, 100 + animatedValue, animTv.getWidth() + animatedValue, animTv.getHeight() + animatedValue + 100);
-                        }
-                });
-                valueAnimator.setInterpolator(new TimeInterpolator() {
-                        @Override
-                        public float getInterpolation(float input) { //这里是个百分比
-                                Logger.e(TAG, "getInterpolation====" + input);
-                                return input;
-                        }
-                });
-                valueAnimator.addListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationStart(Animator animation, boolean isReverse) {
-                                Logger.e(TAG, "...onAnimationStart...");
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animator animation, boolean isReverse) {
-                                Logger.e(TAG, "...onAnimationEnd...");
-                        }
-                });
-                valueAnimator.start();
-        }
-
-
-        private void testObjectAnim() {
-                // rorationY 是 animTv 的一个属性，
-                // 在 0-180-0 这个角度中用4s 完成动画。
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(animTv, "rotationY", 0, 180, 0);
-                objectAnimator.setDuration(4000);
-                objectAnimator.start();
-        }
-
-        private void testObjAnim(){
-                ViewWrap viewWrap = new ViewWrap(animTv);
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(viewWrap, "width", viewWrap.getWidth(), 800);
-                objectAnimator.setDuration(4000);
-                objectAnimator.start();
-        }
+//        private void testValueAnim() {
+//                ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 200);
+//                valueAnimator.setDuration(3000);
+//                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//                        @Override
+//                        public void onAnimationUpdate(ValueAnimator animation) {
+//                                Logger.e(TAG, "onAnimationUpdate=" + animation.getAnimatedValue());
+//                                Integer animatedValue = (Integer) animation.getAnimatedValue();
+//                                animTv.layout(0 + animatedValue, 100 + animatedValue, animTv.getWidth() + animatedValue, animTv.getHeight() + animatedValue + 100);
+//                        }
+//                });
+//                valueAnimator.setInterpolator(new TimeInterpolator() {
+//                        @Override
+//                        public float getInterpolation(float input) { //这里是个百分比
+//                                Logger.e(TAG, "getInterpolation====" + input);
+//                                return input;
+//                        }
+//                });
+//                valueAnimator.addListener(new AnimatorListenerAdapter() {
+//                        @Override
+//                        public void onAnimationStart(Animator animation, boolean isReverse) {
+//                                Logger.e(TAG, "...onAnimationStart...");
+//                        }
+//
+//                        @Override
+//                        public void onAnimationEnd(Animator animation, boolean isReverse) {
+//                                Logger.e(TAG, "...onAnimationEnd...");
+//                        }
+//                });
+//                valueAnimator.start();
+//        }
+//
+//
+//        private void testObjectAnim() {
+//                // rorationY 是 animTv 的一个属性，
+//                // 在 0-180-0 这个角度中用4s 完成动画。
+//                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(animTv, "rotationY", 0, 180, 0);
+//                objectAnimator.setDuration(4000);
+//                objectAnimator.start();
+//        }
+//
+//        private void testObjAnim(){
+//                ViewWrap viewWrap = new ViewWrap(animTv);
+//                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(viewWrap, "width", viewWrap.getWidth(), 800);
+//                objectAnimator.setDuration(4000);
+//                objectAnimator.start();
+//        }
 
         /**
          * 在视图动画中用AnimationSet可以实现多个动画一起执行，在属性动画中，
